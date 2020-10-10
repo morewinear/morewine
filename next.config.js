@@ -1,6 +1,6 @@
 const withImages = require('next-images')
 
-export default withImages({
+module.exports = withImages({
   fileExtensions: ['jpg', 'png'],
   webpack(config) {
     config.module.rules.push({
