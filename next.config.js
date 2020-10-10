@@ -1,4 +1,4 @@
-import withImages from 'next-images'
+const withImages = require('next-images')
 
 export default withImages({
   fileExtensions: ['jpg', 'png'],
