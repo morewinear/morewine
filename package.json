@@ -28,7 +28,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build:server": "tsc --project tsconfig.server.json",
+    "build:server": "tsc --project tsconfig.json",
     "build:next": "next build",
     "build": "npm run build:next && npm run build:server",
     "dev": "ts-node server.ts",
