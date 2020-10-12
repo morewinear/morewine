@@ -37,11 +37,7 @@ export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX
         <AboutMenuContainer data-about>
           {
             AboutMenuData.map(({ name, link }: { name: string, link: string }, index: number) => {
-              return (
-                <Link key={index} href={link} passHref={true}>
-                  <AboutMenuItem>{name}</AboutMenuItem>
-                </Link>
-              )
+              return <AboutMenuItem key={index} href={link}>{name}</AboutMenuItem>
             })
           }
         </AboutMenuContainer>

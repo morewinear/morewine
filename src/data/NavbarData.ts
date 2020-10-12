@@ -4,7 +4,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 export const AboutMenuData = [
   {
     name: 'Nuestra historia',
-    link: '/nosotros',
+    link: '/#nosotros',
   }
 ]
 

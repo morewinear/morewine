@@ -82,11 +82,16 @@ export const SocialHolder = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  & > svg {
-    height: 38px !important;
-    width: 38px !important;
+  & > a {
+    height: 38px;
+    width: 38px;
     margin: 0px 16px;
-    color: white;
-    opacity: 0.4;
+
+    & > svg {
+      width: 100% !important;
+      height: 100% !important;
+      color: white;
+      opacity: 0.6;
+    }
   }
 `

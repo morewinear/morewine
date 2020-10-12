@@ -58,7 +58,11 @@ export default function PhoneRightMenu(): JSX.Element {
         <SocialHolder>
           {
             SocialMenuData.map(({ icon, link }, index: number) => {
-              return <FontAwesomeIcon icon={icon} />
+              return (
+                <a key={index} href={link}>
+                  <FontAwesomeIcon icon={icon} />
+                </a>
+              )
             })
           }
         </SocialHolder>

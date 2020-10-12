@@ -1,8 +1,8 @@
-import Section from '../components/Section'
 import { useEffect, useState } from 'react'
 
 import CarouselsHandler from '../components/CarouselsHandler'
 import WineInfoSection from '../components/WineInfoSection'
+import AboutSection from '../components/AboutSection'
 
 import LayoutHandler from '../components/LayoutHandler'
 
@@ -15,12 +15,30 @@ export default function Index(): JSX.Element {
 
   const [selectedSection, setSelectedSection] = useState('')
 
+  useEffect(() => {
+    let { hash: section } = location
+    if (!section) return
+    section = section.replaceAll('#', '')
+    console.log(section)
+    setSelectedSection(section)
+  }, [])
+
+  useEffect(() => {
+    if (!window) return
+    const onHashChange = ({ newURL }: { newURL: string }) => {
+      console.log(newURL)
+      setSelectedSection(newURL.split('#')[1])
+    }
+
+    window.addEventListener('hashchange', onHashChange, false)
+
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
   return (
     <>
       <LayoutHandler title={'More Wine'} scrollToSection={selectedSection} carouselCallback={setSelectedSection} sort={true} accumulateSpeed={false}>
-        <Section>
-          <CarouselsHandler sectionCallback={setSelectedSection} />
-        </Section>
+        <CarouselsHandler sectionCallback={setSelectedSection} />
         {
           Object.keys(WineData).map((key, index) => {
             const { img, cellar, description, datasheet, web, store } = WineData[key]
@@ -28,6 +46,7 @@ export default function Index(): JSX.Element {
             return <WineInfoSection key={index} id={key} img={img} background={background[(index + offset) % 3]} logo={logo} description={description} datasheet={datasheet} web={web} store={store} />
           })
         }
+        <AboutSection id={'nosotros'} />
       </LayoutHandler>
     </>
   )
