@@ -29,7 +29,7 @@ export const SocialMenuData = [
 
 export type WebMenuType = {
   name: string,
-  link: string,
+  link: string | null,
   drop?: DropType[],
 }
 
@@ -45,33 +45,33 @@ export const WebMenuData: WebMenuType[] = [
     drop: [
       {
         name: 'Nieto Senetiner',
-        link: '/linea/nieto-senetiner',
+        link: '/lineas#nieto-senetiner',
       },
       {
         name: 'Salentein',
-        link: '/linea/salentein',
+        link: '/lineas#salentein',
       },
       {
         name: 'La Mascota',
-        link: '/linea/la-mascota',
+        link: '/lineas#mascota',
       },
       {
         name: 'Mosquita Muerta',
-        link: '/linea/mosquita-muerta',
+        link: '/lineas#mosquita-muerta',
       },
       {
         name: 'Cadus',
-        link: '/linea/cadus',
+        link: '/lineas#cadus',
       },
       {
         name: 'Viña Cobos',
-        link: '/linea/vina-cobos',
+        link: '/lineas#cobos',
       },
     ],
   },
   {
     name: 'Varietales',
-    link: '/varietales',
+    link: null,
     drop: [
       {
         name: 'Malbec',
@@ -93,14 +93,6 @@ export const WebMenuData: WebMenuType[] = [
         name: 'Bonarda',
         link: '/varietal/bonarda',
       },
-      {
-        name: 'Tempranillo',
-        link: '/varietal/tempranillo',
-      },
-      {
-        name: 'Merlot',
-        link: '/varietal/merlot',
-      }
     ],
   },
   {

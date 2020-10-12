@@ -16,7 +16,14 @@ module.exports = withImages({
           }
         }
       ],
-    });
+    },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        loader: 'file-loader',
+        options: {
+          name: '/static/fonts/[name].[ext]',
+        }
+      });
 
     return config;
   },

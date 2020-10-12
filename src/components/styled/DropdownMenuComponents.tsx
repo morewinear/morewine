@@ -12,7 +12,7 @@ export const DropdownContainer = styled.div`
   top: 20px;
   display: flex;
   flex-direction: column;
-  background-color: #111111DD;
+  background-color: #00000099;
   right: 0;
 `
 

@@ -3,25 +3,85 @@ import { animated } from 'react-spring'
 
 export const WineInfoContainer = styled.div`
   background-color: #111111;
-  width: max-content;
-  min-width: 70%;
-  height: 90%;
+  width: 100%;
+  height: calc(100% - 10px);
   display: grid;
   gap: 0px 4px;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: 'image' 'description';
-  box-shadow: 0px 0px 10px 5px rgba(34,34,34,1);
+
+  @media (max-width: 519px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 4px 4px;
+  }
 `
 
-export const WineImage = styled(animated.img)`
+type CellarContainerType = {
+  background: string,
+}
+
+export const CellarContainer = styled.div<CellarContainerType>`
+  background-image: url('${({ background }) => background}');
+  background-size: cover;
+  background-color: rgba(17, 17, 17, 0.6);
+  background-blend-mode: darken;
+  transition: all .4s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba(17, 17, 17, 0.2);
+  }  
+
+  & > svg {
+    width: 35%;
+  }
+
+  @media (max-width: 519px) {
+    display: none;
+  }
+`
+
+export const WineContainer = styled.div`
+  position: relative;
+  display: grid;
+  gap: 0px 4px;
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'image' 'description';
+
+  @media (max-width: 519px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: .75fr 1fr;
+    gap: 4px 0px;
+  }
+`
+
+type WineImageType = {
+  background: string,
+}
+
+export const WineImage = styled(animated.div)<WineImageType>`
+  background-image: url('${({ background }) => background}');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
   height: calc(100% - 2 * 8px);
+  width: 100%;
   margin: auto;
   filter: drop-shadow(0 0 0.6em #2d2d2d);
+
+  @media (max-width: 519px) {
+    margin-top: 38px;
+  }
 `
 
 export const InfoContainer = styled.div`
   position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `
@@ -37,6 +97,13 @@ export const DescriptionContainer = styled(animated.p)`
   margin-top: 5%;
   color: white;
   opacity: 0.6;
+
+  @media (max-width: 519px) {
+    margin-top: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
 `
 
 export const LinksContainer = styled.div`
@@ -46,6 +113,12 @@ export const LinksContainer = styled.div`
   bottom: 15%;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 519px) {
+    padding-left: 5%;
+    padding-right: 5%;
+    bottom: 10%;
+  }
 `
 
 export const LinkContainer = styled(animated.a)`
@@ -54,7 +127,7 @@ export const LinkContainer = styled(animated.a)`
   opacity: 0.6;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: calc(0.9 * 0.813em);
+  font-size: calc(1.15 * 0.813em);
   font-weight: 700;
   letter-spacing: 0.08em;
 

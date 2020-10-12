@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import Navbar from '../components/Navbar'
 import SectionHandler from '../components/SectionHandler'
@@ -11,13 +11,17 @@ type LayoutHandlerType = {
   children?: unknown,
   scrollToSection?: string,
   carouselCallback?: Dispatch<SetStateAction<string>>,
+  sort?: boolean,
+  accumulateSpeed?: boolean,
 }
 
 export default function LayoutHandler({
   title,
   children,
   scrollToSection,
-  carouselCallback
+  carouselCallback,
+  sort = false,
+  accumulateSpeed,
 }: LayoutHandlerType): JSX.Element {
 
   const [shouldUpdateNavbar, setShouldUpdateNavbar] = useState(false)
@@ -43,6 +47,7 @@ export default function LayoutHandler({
         <meta name={'format-detection'} content={'telephone=yes'} />
         <meta name={'HandheldFriendly'} content={'true'} />
         <meta name={'viewport'} content={'width=device-width, initial-scale=1.0'} />
+        <meta httpEquiv={'ScreenOrientation'} content={'autoRotate=disabled'} />
 
         <meta name={'Content-Style-Type'} content={'text/css'} />
         <meta name={'Content-Script-Type'} content={'text/javascript'} />
@@ -50,7 +55,7 @@ export default function LayoutHandler({
         <link rel={'canonical'} href={'https://morewine.ar/'} />
       </Head>
       <Navbar shouldUpdate={shouldUpdateNavbar} />
-      <SectionHandler section={scrollToSection} navbarCallback={setShouldUpdateNavbar} sectionCallback={carouselCallback}>
+      <SectionHandler section={scrollToSection} navbarCallback={setShouldUpdateNavbar} sectionCallback={carouselCallback} sort={sort} accumulateSpeed={accumulateSpeed}>
         {children}
       </SectionHandler>
     </>

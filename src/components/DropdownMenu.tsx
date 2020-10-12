@@ -25,11 +25,7 @@ export default function DropdownMenu({ children, drop }: DropdownMenuType): JSX.
         {children}
         <DropdownContainer>
           {drop ? drop.map(({ name, link }, index: number) => {
-            return (
-              <Link key={index} href={link} passHref>
-                <DropdownItem index={index} data-show={debounced}>{name}</DropdownItem>
-              </Link>
-            )
+            return <DropdownItem key={index} href={link} index={index} data-show={debounced}>{name}</DropdownItem>
           }) : ''}
         </DropdownContainer>
       </DropdownMenuContainer>

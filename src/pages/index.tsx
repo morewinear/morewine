@@ -1,5 +1,5 @@
 import Section from '../components/Section'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import CarouselsHandler from '../components/CarouselsHandler'
 import WineInfoSection from '../components/WineInfoSection'
@@ -7,6 +7,9 @@ import WineInfoSection from '../components/WineInfoSection'
 import LayoutHandler from '../components/LayoutHandler'
 
 import { WineData } from '../data/WineData'
+import { CellarData } from '../data/CellarsData'
+
+const offset = Math.floor(Math.random() * 3)
 
 export default function Index(): JSX.Element {
 
@@ -14,14 +17,15 @@ export default function Index(): JSX.Element {
 
   return (
     <>
-      <LayoutHandler title={'More Wine'} scrollToSection={selectedSection} carouselCallback={setSelectedSection}>
+      <LayoutHandler title={'More Wine'} scrollToSection={selectedSection} carouselCallback={setSelectedSection} sort={true} accumulateSpeed={false}>
         <Section>
           <CarouselsHandler sectionCallback={setSelectedSection} />
         </Section>
         {
           Object.keys(WineData).map((key, index) => {
-            const { img, description, datasheet, web, store } = WineData[key]
-            return <WineInfoSection key={index} id={key} img={img} description={description} datasheet={datasheet} web={web} store={store} />
+            const { img, cellar, description, datasheet, web, store } = WineData[key]
+            const { background, logo } = CellarData[cellar]
+            return <WineInfoSection key={index} id={key} img={img} background={background[(index + offset) % 3]} logo={logo} description={description} datasheet={datasheet} web={web} store={store} />
           })
         }
       </LayoutHandler>

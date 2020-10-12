@@ -5,6 +5,8 @@ import Section from './Section'
 
 import {
   WineInfoContainer,
+  CellarContainer,
+  WineContainer,
   WineImage,
   InfoContainer,
   DescriptionContainer,
@@ -15,13 +17,15 @@ import {
 type WineInfoSectionType = {
   id: string,
   img: string,
+  background: string,
+  logo: any,
   description: string,
   datasheet: string,
   web: string,
   store: string,
 }
 
-export default function WineInfoSection({ id, img, description, datasheet, web, store }: WineInfoSectionType): JSX.Element {
+export default function WineInfoSection({ id, img, background, logo: { default: Logo }, description, datasheet, web, store }: WineInfoSectionType): JSX.Element {
   const [ref, entry] = useIntersectionObserver({ threshold: 0.85 })
   const [links] = useState([
     ({ style }: { style: CSSProperties }) => <LinkContainer href={datasheet} style={{ ...style }}>Ficha Técnica</LinkContainer>,
@@ -89,19 +93,24 @@ export default function WineInfoSection({ id, img, description, datasheet, web, 
     <>
       <Section id={id}>
         <WineInfoContainer ref={ref}>
-          <WineImage src={img} style={{ ...WineImageSpring }} />
-          <InfoContainer>
-            <DescriptionContainer style={{ ...DescriptionContainerSpring }}>
-              {description}
-            </DescriptionContainer>
-            <LinksContainer>
-              {
-                LinkContainerTransition.map(({ item: Item, props, key }) => {
-                  return <Item key={key} style={props} />
-                })
-              }
-            </LinksContainer>
-          </InfoContainer>
+          <WineContainer>
+            <WineImage background={img} style={{ ...WineImageSpring }} />
+            <InfoContainer>
+              <DescriptionContainer style={{ ...DescriptionContainerSpring }}>
+                {description}
+              </DescriptionContainer>
+              <LinksContainer>
+                {
+                  LinkContainerTransition.map(({ item: Item, props, key }) => {
+                    return <Item key={key} style={props} />
+                  })
+                }
+              </LinksContainer>
+            </InfoContainer>
+          </WineContainer>
+          <CellarContainer background={background}>
+            <Logo />
+          </CellarContainer>
         </WineInfoContainer>
       </Section>
     </>

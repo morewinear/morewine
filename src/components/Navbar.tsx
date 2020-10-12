@@ -18,6 +18,8 @@ import {
 
 import DropdownMenu from '../components/DropdownMenu'
 
+import PhoneMenu from '../components/PhoneMenu'
+
 import { AboutMenuData, SocialMenuData, WebMenuData, WebMenuType } from '../data/NavbarData'
 
 import Logo from '../public/images/logo.svg'
@@ -57,13 +59,14 @@ export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX
             return (
               <>
                 <DropdownMenu drop={drop}>
-                  <WebMenuItem href={link}>{name}</WebMenuItem>
+                  <WebMenuItem href={link as string}>{name}</WebMenuItem>
                 </DropdownMenu>
                 <WebMenuSeparator>·</WebMenuSeparator>
               </>
             )
           })}
         </WebMenuContainer>
+        <PhoneMenu />
       </NavbarContainer>
       <SubNavbarContainer data-update={!shouldUpdate}>
         <Link href={'/'} passHref={true}>
@@ -76,7 +79,7 @@ export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX
             return (
               <>
                 <DropdownMenu drop={drop}>
-                  <WebMenuItem href={link}>{name}</WebMenuItem>
+                  <WebMenuItem href={link as string}>{name}</WebMenuItem>
                 </DropdownMenu>
                 <WebMenuSeparator>·</WebMenuSeparator>
               </>

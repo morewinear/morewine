@@ -62,6 +62,6 @@ export const ImageBackground = styled.div<ImageBackgroundType>`
   transition: all .2s ease-in-out;
   background-image: url('${({ image }) => image}');
   background-size: cover;
-  background-position: ${({ offset }) => offset}%;
+  background-position: ${({ offset }) => offset}% 50%;
   will-change: transform;
 `

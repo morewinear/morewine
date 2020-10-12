@@ -9,6 +9,10 @@ export const NavbarContainer = styled.div`
   padding: 8px 5.55%;
   z-index: 100000;
 
+  & > div[data-phone] {
+    display: none;
+  }
+
   &[data-update=true] {
     height: 72px;
 
@@ -25,6 +29,32 @@ export const NavbarContainer = styled.div`
     }
 
     & > div[data-menu] {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 519px) {
+    height: 72px !important;
+
+    & > a[data-logo] {
+      display: block;
+      margin: auto;
+      transform: scale(0.8);
+    }
+
+    & > div[data-about] {
+      display: none !important;
+    }
+
+    & > div[data-social] {
+      display: none !important;
+    }
+
+    & > div[data-menu] {
+      display: none !important;
+    }
+
+    & > div[data-phone] {
       display: flex;
     }
   }
@@ -133,9 +163,7 @@ export const WebMenuSeparator = styled(MenuItem)`
 export const SubNavbarContainer = styled.div`
   position: absolute;
   width: calc(100% - 2 * 5.55%);
-  height: 0;
   z-index: 100000;
-  background-color: grey;
   top: calc(52px + 1.5em);
   left: 5.55%;
 
@@ -146,6 +174,10 @@ export const SubNavbarContainer = styled.div`
   }
 
   &[data-update=false] {
+    display: none;
+  }
+
+  @media (max-width: 519px) {
     display: none;
   }
 `

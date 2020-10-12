@@ -14,9 +14,12 @@ type SectionHandlerType = {
   navbarCallback: Dispatch<SetStateAction<boolean>>,
   sectionCallback?: Dispatch<SetStateAction<string>> | undefined,
   section?: string | undefined,
+  sort?: boolean,
+  accumulateSpeed?: boolean,
 }
 
-export default function SectionHandler({ children, navbarCallback: setUpdateNavbar, section = '', sectionCallback }: SectionHandlerType): JSX.Element {
+export default function SectionHandler({ children, navbarCallback: setUpdateNavbar, section = '', sectionCallback, sort = false, accumulateSpeed }: SectionHandlerType): JSX.Element {
+  const [scrollIndex, setScrollIndex] = useState(1);
   const [shouldScroll, setShouldScroll] = useState(false)
   const [sortedChildren, setSortedChildren] = useState<Array<unknown> | null>(null)
   const [ref, scroll] = useScroll()
@@ -28,10 +31,10 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
   }, [scroll])
 
   useEffect(() => {
-    if (section && section.length < 1) return
+    if (!section) return
+    if (section.length < 1) return
     if (!(children instanceof Array)) return
     children = children.flat()
-    console.log(section)
     const foundSection = (children as Array<ReactElement<SectionType>>).filter(({ props }) => {
       if (!props) return false
       const { id } = props
@@ -39,7 +42,11 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
     })[0]
 
     if (foundSection) {
-      setSortedChildren(moveItem(children, (children as Array<ReactElement<SectionType>>).indexOf(foundSection), 1))
+      if (sort) {
+        setSortedChildren(moveItem(children, (children as Array<ReactElement<SectionType>>).indexOf(foundSection), 1))
+      } else {
+        setScrollIndex((children as Array<ReactElement<SectionType>>).indexOf(foundSection))
+      }
       setShouldScroll(true)
     }
 
@@ -51,13 +58,14 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
 
     const easing = (x: number) => x < 0.5 ? 4 * pow(x, 3) : 1 - pow(-2 * x + 2, 3) / 2
 
-    const totalHeight = +!toTop * (node.offsetHeight - 20)
+    
+    const totalHeight = +!toTop * (node.offsetHeight - +(node.scrollTop < 52) * 20)
     let start: number | undefined = undefined
 
     window.requestAnimationFrame(function step(timestamp: number) {
       const nodeY = node.scrollTop
-      const diff = totalHeight - nodeY
-
+      const diff = (sort ? 1 : scrollIndex) * totalHeight - nodeY
+      
       if (diff === 0) {
         if (!toTop) setShouldScroll(false)
         return
@@ -81,14 +89,14 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
     const Node = ref['current']
     if (!Node) return
 
-    smoothScroll(Node, 250, false)
+    smoothScroll(Node, accumulateSpeed ? ((children as Array<ReactElement<SectionType>>).length + 1) * 2 * 250 : 800, false)
   }, [ref, shouldScroll])
 
   const scrollToTopClick = useCallback(() => {
     const Node = ref['current']
     if (!Node) return
 
-    smoothScroll(Node, 250, true)
+    smoothScroll(Node, accumulateSpeed ? ((children as Array<ReactElement<SectionType>>).length + 1) * 2 * 250 : 800, true)
   }, [ref])
 
   return (
@@ -124,7 +132,8 @@ function useScroll(): [MutableRefObject<HTMLDivElement | undefined>, number] {
 
 function moveItem<T>(arr: Array<T>, from: number, to: number): Array<T> {
   const copy = [...arr]
-  const selected = copy.splice(from, 1)[0]
-  copy.splice(to, 0, selected)
+  const selected = copy.splice(from, 3)
+  console.log(selected)
+  copy.splice(to, 0, ...selected)
   return copy
 }
