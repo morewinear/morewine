@@ -95,6 +95,6 @@ export const DescriptionText = styled.p<DescriptionTextType>`
   @media (max-width: 519px) {
     font-size: 0.85em;
     text-align: center;
-    margin: 0 5%;
+    margin: 0 5%; 
   }
 `
