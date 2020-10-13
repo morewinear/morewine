@@ -20,19 +20,19 @@ type WineInfoSectionType = {
   background: string,
   logo: any,
   description: string,
-  datasheet: string,
+  datasheet: any,
   web: string,
   store: string,
 }
 
-export default function WineInfoSection({ id, img, background, logo: { default: Logo }, description, datasheet, web, store }: WineInfoSectionType): JSX.Element {
+export default function WineInfoSection({ id, img, background, logo: { default: Logo }, description, datasheet: { default: datasheet }, web, store }: WineInfoSectionType): JSX.Element {
   const [ref, entry] = useIntersectionObserver({ threshold: 0.85 })
   const [links] = useState([
     ({ style }: { style: CSSProperties }) => <LinkContainer href={datasheet} style={{ ...style }}>Ficha Técnica</LinkContainer>,
     ({ style }: { style: CSSProperties }) => <LinkContainer href={web} style={{ ...style }}>Web Oficial</LinkContainer>,
     ({ style }: { style: CSSProperties }) => <LinkContainer href={store} style={{ ...style }}>Ver en Tienda</LinkContainer>,
   ])
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState<boolean>(false)
   const debouncedShow = useDebounce(show, 200)
 
   useEffect(() => {

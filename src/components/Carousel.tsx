@@ -16,7 +16,7 @@ type Slide = {
 }
 
 export default function Carousel({ cellar, images, callback: sectionCallback }: { cellar: string, images: Slide[], callback: Dispatch<SetStateAction<string>> }): JSX.Element {
-  const [slide, setSlide] = useState(0)
+  const [slide, setSlide] = useState<number>(0)
 
   const slides = useMemo(() => {
     return images.map(({ img, offset, id }, index: number) => {

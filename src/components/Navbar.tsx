@@ -51,13 +51,13 @@ export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX
           })}
         </SocialMenuContainer>
         <WebMenuContainer data-menu>
-          {WebMenuData.map(({ name, link, drop }: WebMenuType) => {
+          {WebMenuData.map(({ name, link, drop }: WebMenuType, index: number) => {
             return (
               <>
-                <DropdownMenu drop={drop}>
+                <DropdownMenu key={index} drop={drop}>
                   <WebMenuItem href={link as string}>{name}</WebMenuItem>
                 </DropdownMenu>
-                <WebMenuSeparator>·</WebMenuSeparator>
+                <WebMenuSeparator key={10000 - index}>·</WebMenuSeparator>
               </>
             )
           })}
@@ -71,13 +71,13 @@ export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX
           </LogoContainer>
         </Link>
         <SubWebMenuContainer>
-          {WebMenuData.map(({ name, link, drop }: WebMenuType) => {
+          {WebMenuData.map(({ name, link, drop }: WebMenuType, index: number) => {
             return (
               <>
-                <DropdownMenu drop={drop}>
+                <DropdownMenu key={index} drop={drop}>
                   <WebMenuItem href={link as string}>{name}</WebMenuItem>
                 </DropdownMenu>
-                <WebMenuSeparator>·</WebMenuSeparator>
+                <WebMenuSeparator key={10000 - index}>·</WebMenuSeparator>
               </>
             )
           })}

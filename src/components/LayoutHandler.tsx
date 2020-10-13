@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import Navbar from '../components/Navbar'
 import SectionHandler from '../components/SectionHandler'
+import DisclaimerWindow from '../components/DisclaimerWindow'
 
 import { Description, Keywords } from '../data/MetaTags'
 
@@ -54,6 +55,7 @@ export default function LayoutHandler({
 
         <link rel={'canonical'} href={'https://morewine.ar/'} />
       </Head>
+      <DisclaimerWindow />
       <Navbar shouldUpdate={shouldUpdateNavbar} />
       <SectionHandler section={scrollToSection} navbarCallback={setShouldUpdateNavbar} sectionCallback={carouselCallback} sort={sort} accumulateSpeed={accumulateSpeed}>
         {children}

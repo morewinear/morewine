@@ -19,9 +19,9 @@ type SectionHandlerType = {
 }
 
 export default function SectionHandler({ children, navbarCallback: setUpdateNavbar, section = '', sectionCallback, sort = false, accumulateSpeed }: SectionHandlerType): JSX.Element {
-  const [prevSection, setPrevSection] = useState('')
-  const [scrollIndex, setScrollIndex] = useState(1)
-  const [shouldScroll, setShouldScroll] = useState(false)
+  const [prevSection, setPrevSection] = useState<string>('')
+  const [scrollIndex, setScrollIndex] = useState<number>(1)
+  const [shouldScroll, setShouldScroll] = useState<boolean>(false)
   const [sortedChildren, setSortedChildren] = useState<Array<unknown> | null>(null)
   const [ref, scroll] = useScroll()
 
@@ -118,7 +118,7 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
 }
 
 function useScroll(): [MutableRefObject<HTMLDivElement | undefined>, number] {
-  const [scroll, setScroll] = useState(0)
+  const [scroll, setScroll] = useState<number>(0)
 
   const ref = useRef<HTMLDivElement>()
 
