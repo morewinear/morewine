@@ -68,12 +68,12 @@ export const TitleContainer = styled.p`
   font-size: 24px;
   line-height: 1.85;
   text-transform: uppercase;
-  text-align: center;
   margin: 1.25vh 10%;
 
   @media (max-width: 519px) {
     font-size: 0.95em;
     margin: 0.75vh 10%;
+    text-align: center;
   }
 `
 
@@ -87,7 +87,6 @@ export const DescriptionText = styled.p<DescriptionTextType>`
   opacity: 0.6;
   font-size: 16px;
   line-height: 1.85;
-  text-align: center;
   margin: 0 10%;
   margin-top: ${({ top }) => top}vh;
   margin-bottom: ${({ bottom }) => bottom}vh;
@@ -95,5 +94,7 @@ export const DescriptionText = styled.p<DescriptionTextType>`
 
   @media (max-width: 519px) {
     font-size: 0.85em;
+    text-align: center;
+    margin: 0 5%;
   }
 `
