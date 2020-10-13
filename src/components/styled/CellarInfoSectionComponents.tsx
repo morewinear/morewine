@@ -86,6 +86,7 @@ export const DescriptionText = styled.p<DescriptionTextType>`
   opacity: 0.6;
   font-size: 16px;
   line-height: 1.85;
+  text-align: center;
   margin: 0 10%;
   margin-top: ${({ top }) => top}vh;
   margin-bottom: ${({ bottom }) => bottom}vh;
