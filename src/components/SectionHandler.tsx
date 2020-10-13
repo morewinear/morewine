@@ -47,7 +47,6 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
         setScrollIndex((children as Array<ReactElement<SectionType>>).length - 1)
         setPrevSection('nosotros')
       } else if (sort && section !== 'nosotros') {
-        console.log('asdasd')
         setSortedChildren(moveItem(children, (children as Array<ReactElement<SectionType>>).indexOf(foundSection), 1))
       } else {
         setScrollIndex((children as Array<ReactElement<SectionType>>).indexOf(foundSection))
@@ -63,14 +62,13 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
 
     const easing = (x: number) => x < 0.5 ? 4 * pow(x, 3) : 1 - pow(-2 * x + 2, 3) / 2
 
-
     const totalHeight = +!toTop * (node.offsetHeight - +(node.scrollTop < 52) * 20)
     let start: number | undefined = undefined
 
     window.requestAnimationFrame(function step(timestamp: number) {
       const nodeY = node.scrollTop
       const diff = ((sort && prevSection != 'nosotros') ? 1 : scrollIndex) * totalHeight - nodeY
-      console.log('>>', section, (sort && section != 'nosotros') ? 1 : scrollIndex)
+
       if (diff === 0) {
         if (!toTop) setShouldScroll(false)
         return
@@ -156,7 +154,6 @@ function moveItem<T>(arr: Array<T>, from: number, to: number): Array<T> {
       break;
     }
   }
-  console.log(selected)
   copy.splice(to, 0, ...selected)
   return copy
 }
