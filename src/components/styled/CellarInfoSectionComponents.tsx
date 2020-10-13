@@ -68,6 +68,7 @@ export const TitleContainer = styled.p`
   font-size: 24px;
   line-height: 1.85;
   text-transform: uppercase;
+  text-align: center;
   margin: 1.25vh 10%;
 
   @media (max-width: 519px) {
