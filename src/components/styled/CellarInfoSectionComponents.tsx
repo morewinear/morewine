@@ -93,7 +93,7 @@ export const DescriptionText = styled.p<DescriptionTextType>`
   font-family: 'Minion Pro Italic';
 
   @media (max-width: 519px) {
-    font-size: 0.85em;
+    font-size: 1.7vh;
     text-align: center;
     margin: 0 5%; 
   }

@@ -45,12 +45,9 @@ export const Text = styled.p`
   font-size: calc(1.65 * 0.813em);
   margin: 1.15vh 0;
   text-align: center;
+  font-family: 'Minion Pro Italic';
 
   &[data-bold] {
     font-weight: 700;
-  }
-
-  &[data-italic] {
-    font-style: italic;
   }
 `

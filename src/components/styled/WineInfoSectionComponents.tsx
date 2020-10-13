@@ -90,19 +90,21 @@ export const DescriptionContainer = styled(animated.p)`
   width: 100%;
   max-width: 570px;
   padding-right: 16px;
-  font-size: calc(1.25 * 0.813em);
+  font-size: calc(1.45 * 0.813em);
   font-weight: 500;
   font-style: italic;
   line-height: 2;
-  margin-top: 5%;
+  margin-top: 6vh;
   color: white;
   opacity: 0.6;
+  font-family: 'Minion Pro Italic';
 
   @media (max-width: 519px) {
     margin-top: 15%;
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
+    font-size: calc(1 * 0.813em);
   }
 `
 
@@ -110,7 +112,7 @@ export const LinksContainer = styled.div`
   position: absolute;
   width: 100%;
   max-width: 570px;
-  bottom: 15%;
+  bottom: 10vh;
   display: flex;
   flex-direction: column;
 
@@ -137,5 +139,9 @@ export const LinkContainer = styled(animated.a)`
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (max-width: 519px) {
+    font-size: calc(0.8 * 0.813em);
   }
 `

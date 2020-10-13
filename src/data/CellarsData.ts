@@ -162,7 +162,7 @@ export const CellarData: { [key: string]: CellarDataType } = {
       ['El reloj comenzó a girar un día de 1888 en Vistalba, Luján de Cuyo, cuando un grupo de inmigrantes italianos hundió sus manos en la tierra para plantar los primeros viñedos y fundar una nueva bodega.', 1.25, 0.25],
       ['Desde ese primer día, diferentes familias fueron transmitiéndose, unas a otras, los secretos de la elaboración de grandes vinos: un profundo amor por la naturaleza, el respeto por la esencia de cada terroir y el valor de la espera.', 0.25, 1.25],
       ['En 1969, las familias Nieto y Senetiner adquirieron la finca y comenzaron a escribir un nuevo capítulo de crecimiento y desarrollo. Ampliaron las instalaciones y consolidaron una presencia que ya se había vuelto ineludible en la historia de los grandes vinos argentinos.', 1.25, 1.25],
-      ['En 1998, Nieto Senetiner pasó a formar parte del Grupo de Bodegas de la familia Pérez Companc. Comprometido con los más altos estándares de elaboración y calidad del vino, y sustentados en un plan continuo de inversiones, tanto en fincas como en tecnología de procesos, Nieto Senetiner consolida desde entonces su liderazgo, sin renunciar a los nobles atributos que forjaron su origen y marcaron su tiempo.', 1.25, 1.25],
+      ['Comprometido con los más altos estándares de elaboración y calidad del vino, y sustentados en un plan continuo de inversiones, tanto en fincas como en tecnología de procesos, Nieto Senetiner consolida desde entonces su liderazgo, sin renunciar a los nobles atributos que forjaron su origen y marcaron su tiempo.', 1.25, 1.25],
     ],
   },
   'salentein': {

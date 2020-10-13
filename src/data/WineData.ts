@@ -102,21 +102,21 @@ export const WineData: { [key: string]: WineDataType } = {
   "cadus_tupungato_malbec": {
     img: require('../public/images/wines/cadus_tupungato_malbec.png'),    //DONE
     cellar: 'cadus',
-    description: '',
+    description: 'Es un tinto de un rojo-violeta intenso, que ofrece en nariz refrescantes y voluptuosas notas a violetas y, también, a membrillo. En boca es jugoso, mordiente, con unos taninos muy suaves y un carácter mineral que se expresa en esa sensación a "tiza" en el medio de la lengua.',
     datasheet: require('../public/datasheets/Cadus Appellation Tupungato.pdf'),
     store: '',
   },
-  "cadus_chacayes_malbec": {
-    img: require('../public/images/wines/cadus_chacayes_malbec.png'),     //DONE
+  "cadus_blend_vineyards": {
+    img: require('../public/images/wines/cadus_blend_vineyards.png'),     //DONE
     cellar: 'cadus',
-    description: '',
-    datasheet: require('../public/datasheets/Cadus Appellation Chacayes.pdf'),
+    description: 'Procedente de tres viñedos diferentes, los rasgos distintivos de cada terruño se conjugan para revelar con elegancia la personalidad de un assemblage auténtico y original. Este blend es un tributo al terroir mendocino, un escenario variado y exuberante de microrregiones. Los rasgos distintivos de cada viñedo se conjugan para revelar con elegancia la personalidad de este assemblage de Malbec.',
+    datasheet: require('../public/datasheets/Cadus Blend of Vineyards.pdf'),
     store: '',
   },
   "cadus_tocazas_malbec": {
     img: require('../public/images/wines/cadus_tocazas_malbec.png'),      //DONE
     cellar: 'cadus',
-    description: '',
+    description: 'Color intenso, con tonalidades rojas y brillantes reflejos violáceos. En nariz se caracteriza por sus aromas a violetas y frutos negros como moras, cassis e higos. También se perciben aromas tostados, ahumados y a caramelo, otorgados por su crianza en barrica de roble. Posee una entrada dulce en boca y una larga y buena estructura, combinada con una importante acidez, que le proporciona fluidez y elegancia.',
     datasheet: require('../public/datasheets/Cadus Single Vineyard Torcazas.pdf'),
     store: '',
   },
