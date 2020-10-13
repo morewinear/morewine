@@ -31,7 +31,7 @@ interface Post {
 }
 
 export default function ContactSection(): JSX.Element {
-  const [response, status, trigger, setOptions] = useAxios<Post>('/api/emails')
+  const [response, status, trigger, setOptions] = useAxios<Post>('/api/email')
 
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
