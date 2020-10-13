@@ -41,9 +41,9 @@ export default function Index(): JSX.Element {
         <CarouselsHandler sectionCallback={setSelectedSection} />
         {
           Object.keys(WineData).map((key, index) => {
-            const { img, cellar, description, datasheet, web, store } = WineData[key]
+            const { img, cellar, description, datasheet, store } = WineData[key]
             const { background, logo } = CellarData[cellar]
-            return <WineInfoSection key={index} id={key} img={img} background={background[(index + offset) % 3]} logo={logo} description={description} datasheet={datasheet} web={web} store={store} />
+            return <WineInfoSection key={index} id={key} img={img} background={background[(index + offset) % 3]} logo={logo} description={description} datasheet={datasheet} store={store} />
           })
         }
         <AboutSection id={'nosotros'} />

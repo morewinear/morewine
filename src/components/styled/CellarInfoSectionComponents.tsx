@@ -84,7 +84,7 @@ type DescriptionTextType = {
 export const DescriptionText = styled.p<DescriptionTextType>`
   color: white;
   opacity: 0.6;
-  font-size: 1.75vmin;
+  font-size: 16px;
   line-height: 1.85;
   margin: 0 10%;
   margin-top: ${({ top }) => top}vh;

@@ -7,7 +7,6 @@ export const ContactSectionContainer = styled.div`
   height: 100%;
   min-height: 350px;
   max-height: 500px;
-  background-color: #111111;
   padding: 8px;
 
   &[data-pending=true] {
@@ -99,7 +98,7 @@ export const StatusContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #111111;
+  background-color: #222;
 
   &[data-status="200"] {
     & > *[data-check] {
