@@ -127,7 +127,7 @@ export const LinkContainer = styled(animated.a)`
   opacity: 0.6;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: calc(1.15 * 0.813em);
+  font-size: calc(0.9 * 0.813em);
   font-weight: 700;
   letter-spacing: 0.08em;
 
