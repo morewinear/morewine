@@ -105,6 +105,7 @@ export const DescriptionContainer = styled(animated.p)`
     padding-right: 10%;
     text-align: center;
     font-size: 1.7vh;
+    line-height: 1.75;
   }
 `
 

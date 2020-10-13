@@ -36,7 +36,7 @@
     "build:next": "next build",
     "build": "npm run build:next && npm run build:server",
     "dev": "ts-node server.ts",
-    "start": "NODE_ENV=production node dist/index.js"
+    "start": "NODE_ENV=production next start"
   },
   "author": "Diego Rodríguez",
   "license": "ISC"
