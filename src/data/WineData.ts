@@ -10,21 +10,21 @@ export const WineData: { [key: string]: WineDataType } = {
   "nieto_nicanor_malbec": {
     img: require('../public/images/wines/nieto_nicanor_malbec.png'),      //DONE
     cellar: 'nieto-senetiner',
-    description: 'Este vino nace en nuestro viñedo de vistalba plantado en 1900. Estas uvas logran por su antigüedad una madurez con armonía y equilibrio.',
+    description: 'Este vino nace en nuestro viñedo de Vistalba plantado en 1900. Estas uvas logran por su antigüedad una madurez con armonía y equilibrio. En nariz, este vino presenta complejos aromas a frutos negros y violetas. En segundo plano se perciben suaves notas de especias, como resultado de su paso de 24 meses por barricas de roble Francés, lo que le otorga mayor elegancia y complejidad. Un clásico para tener en la cava y aprovechar en ocasiones muy puntuales.',
     datasheet: require('../public/datasheets/Nieto Senetiner Don Nicanor Single Vineyard Malbec.pdf'),
     store: '',
   },
   "nieto_limitada_bonarda": {
     img: require('../public/images/wines/nieto_limitada_bonarda.png'),    //DONE
     cellar: 'nieto-senetiner',
-    description: 'En un viñedo de agrelo, cultivándose con cuidado y paciencia desde 1973, empezó la historia de un varietal del que Nieto Senetiner fue pionero.',
+    description: 'En un viñedo de Agrelo, cultivándose con cuidado y paciencia desde 1973, empezó la historia de un varietal del que Nieto Senetiner fue pionero. En nariz de presenta pleno y complejo, con notas de ciruelas, pasas, almendras, mermelada de frutas rojas y algunos matices ahumados. En boca armónico, redondo, persistente, repitiendo las notas percibidas en nariz.',
     datasheet: require('../public/datasheets/Nieto Senetiner Reserva Bonarda.pdf'),
     store: '',
   },
   "nieto_nicanor_barrel": {
     img: require('../public/images/wines/nieto_nicanor_barrel.png'),      //DONE
     cellar: 'nieto-senetiner',
-    description: 'Este vino surge de la selección de las mejores barricas de cada cosecha, inspiradas en la fruta y la expresión del terroir.',
+    description: 'Este vino surge de la selección de las mejores barricas de cada cosecha, inspiradas en la fruta y la expresión del terroir. De intenso color rojo púrpura y exquisitas notas frutales a cereza y grosella. En boca combinan sus amables taninos y moderada acidez.',
     datasheet: require('../public/datasheets/Nieto Senetiner Don Nicanor Barrel Select Malbec.pdf'),
     store: '',
   },
