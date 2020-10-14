@@ -5,7 +5,10 @@ import {
   ImageContainer,
   StoryContainer,
   Text,
+  SignaturesContainer,
 } from './styled/AboutSectionComponents'
+
+import SignatureMJ from '../public/images/signatures/firma-mj.svg'
 
 export default function AboutSection(): JSX.Element {
   return (
@@ -20,6 +23,10 @@ export default function AboutSection(): JSX.Element {
             <Text data-bold>Comercializar vinos de calidad premium al mejor precio del mercado.</Text>
             <Text>Comprometidos con la calidad y la excelencia, entendemos el significado de disfrutar cada momento en compañía de nuestros afectos.</Text>
             <Text data-bold>Y más aún, con un buen vino. </Text>
+            <SignaturesContainer>
+              <SignatureMJ />
+              <SignatureMJ />
+            </SignaturesContainer>
           </StoryContainer>
         </AboutSectionContainer>
       </Section>

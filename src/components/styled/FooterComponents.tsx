@@ -19,4 +19,5 @@ export const FooterText = styled.p`
   line-height: 1;
   letter-spacing: 0.08em;
   font-size: calc(0.8 * 0.813em);
+  text-align: center;
 `

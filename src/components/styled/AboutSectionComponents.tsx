@@ -51,3 +51,27 @@ export const Text = styled.p`
     font-weight: 700;
   }
 `
+
+export const SignaturesContainer = styled.div`
+  height: 15%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 5vh;
+
+  & > svg {
+    width: 100%;
+    height: 100%;
+
+    & > path {
+      fill: darkgray;
+    }
+  }
+
+  @media (max-width: 519px) {
+    height: 35%;
+    width: 35%;
+    margin-top: 0.25vh;
+  }
+`

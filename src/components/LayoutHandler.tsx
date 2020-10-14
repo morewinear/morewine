@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar'
 import SectionHandler from '../components/SectionHandler'
 import DisclaimerWindow from '../components/DisclaimerWindow'
 
+import Favicon from '../public/favicon.ico'
+
 import { Description, Keywords } from '../data/MetaTags'
 
 type LayoutHandlerType = {
@@ -38,6 +40,7 @@ export default function LayoutHandler({
         <meta name={'no-email-collection'} content={'http://www.unspam.com/noemailcollection'} />
 
         <title>{title}</title>
+        <link rel={'icon'} type={'image/vnd.microsoft.icon'} href={Favicon} />
         <meta name={'description'} content={Description} />
         <meta name={'keywords'} content={Keywords.join(',')} />
         <meta name={'robots'} content={'index,follow'} />
