@@ -9,6 +9,8 @@ import {
 } from './styled/AboutSectionComponents'
 
 import SignatureMJ from '../public/images/signatures/firma-mj.svg'
+import SignatureMS from '../public/images/signatures/firma-ms.svg'
+
 
 export default function AboutSection(): JSX.Element {
   return (
@@ -25,7 +27,7 @@ export default function AboutSection(): JSX.Element {
             <Text data-bold>Y más aún, con un buen vino. </Text>
             <SignaturesContainer>
               <SignatureMJ />
-              <SignatureMJ />
+              <SignatureMS />
             </SignaturesContainer>
           </StoryContainer>
         </AboutSectionContainer>
