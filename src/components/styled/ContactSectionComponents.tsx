@@ -6,7 +6,7 @@ export const ContactSectionContainer = styled.div`
   max-width: 450px;
   height: 100%;
   min-height: 350px;
-  max-height: 500px;
+  max-height: 450px;
   padding: 8px;
 
   &[data-pending=true] {
@@ -23,7 +23,8 @@ export const Title = styled.p`
   opacity: 0.6;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: calc(2 * 0.813em);
+  text-align: center;
+  font-size: calc(1.75 * 0.813em);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.08em;
@@ -49,9 +50,9 @@ export const Label = styled.label`
   color: white;
   opacity: 0.6;
   text-transform: uppercase;
-  font-size: calc(1 * 0.813em);
+  font-size: calc(0.9 * 0.813em) !important;
   font-weight: 700;
-  line-height: 2;
+  line-height: 1;
   letter-spacing: 0.08em;
   margin: 0;
 `
@@ -59,7 +60,7 @@ export const Label = styled.label`
 export const Input = styled.input`
   width: 100%;
   height: 2.5em;
-  font-size: calc(1 * 0.813em);
+  font-size: calc(0.9 * 0.813em) !important;
   font-weight: 500;
   line-height: 1;
   margin: 0;
@@ -69,9 +70,14 @@ export const TextareaContainer = styled.div`
   width: 100%;
   height: calc(100% - 3 * 3.5em - 5 * 1.5em - 2em);
   margin-bottom: 1.5em;
-  font-size: calc(1 * 0.813em);
+  font-size: calc(0.9 * 0.813em) !important;
   font-weight: 500;
   line-height: 1;
+
+  & > label {
+    font-size: calc(1.3 * 0.813em) !important;
+    line-height: 1.3;
+  }
 `
 
 export const Textarea = styled.textarea`
@@ -136,7 +142,7 @@ export const StatusText = styled.p`
   color: white;
   opacity: 0.6;
   text-transform: uppercase;
-  font-size: calc(1 * 0.813em);
+  font-size: calc(0.9 * 0.813em) !important;
   font-weight: 700;
   line-height: 2;
   letter-spacing: 0.08em;

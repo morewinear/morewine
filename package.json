@@ -36,7 +36,8 @@
     "build:next": "next build",
     "build": "npm run build:next && npm run build:server",
     "dev": "ts-node server.ts",
-    "start": "NODE_ENV=production next start"
+    "start": "NODE_ENV=production next start -p 8080",
+    "deploy": "gcloud app deploy"
   },
   "author": "Diego Rodríguez",
   "license": "ISC"

@@ -24,7 +24,7 @@ import { AboutMenuData, SocialMenuData, WebMenuData, WebMenuType } from '../data
 
 import Logo from '../public/images/logo.svg'
 
-export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX.Element {
+export default function Navbar({ shouldUpdate,  }: { shouldUpdate: boolean }): JSX.Element {
 
   return (
     <>
@@ -37,7 +37,11 @@ export default function Navbar({ shouldUpdate }: { shouldUpdate: boolean }): JSX
         <AboutMenuContainer data-about>
           {
             AboutMenuData.map(({ name, link }: { name: string, link: string }, index: number) => {
-              return <AboutMenuItem key={index} href={link}>{name}</AboutMenuItem>
+              return (
+                <Link key={index} href={link} passHref>
+                  <AboutMenuItem>{name}</AboutMenuItem>
+                </Link>
+              )
             })
           }
         </AboutMenuContainer>

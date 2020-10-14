@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 
 import Navbar from '../components/Navbar'
 import SectionHandler from '../components/SectionHandler'

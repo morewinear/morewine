@@ -43,10 +43,7 @@ export default function SectionHandler({ children, navbarCallback: setUpdateNavb
     })[0]
 
     if (foundSection) {
-      if (section === 'nosotros') {
-        setScrollIndex((children as Array<ReactElement<SectionType>>).length - 1)
-        setPrevSection('nosotros')
-      } else if (sort && section !== 'nosotros') {
+      if (sort) {
         setSortedChildren(moveItem(children, (children as Array<ReactElement<SectionType>>).indexOf(foundSection), 1))
       } else {
         setScrollIndex((children as Array<ReactElement<SectionType>>).indexOf(foundSection))

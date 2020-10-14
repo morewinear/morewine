@@ -19,6 +19,8 @@ import {
   StatusText,
 } from './styled/ContactSectionComponents'
 
+import Footer from '../components/Footer'
+
 type EventType = {
   target: {
     value: string
@@ -74,31 +76,32 @@ export default function ContactSection(): JSX.Element {
             <StatusText data-check>Enviado exitosamente</StatusText>
             <StatusText data-spinner>Enviando...</StatusText>
           </StatusContainer>
-          <Title>Contacto:</Title>
+          <Title>Contacto</Title>
           <ContactForm>
             <BlockContainer>
-              <Label htmlFor={'name'}>Nombre y apellido:</Label>
+              <Label htmlFor={'name'}>Nombre y apellido</Label>
               <Input type={'text'} name={'name'} onChange={updateName} />
             </BlockContainer>
 
             <BlockContainer>
-              <Label htmlFor={'phone'}>Teléfono:</Label>
+              <Label htmlFor={'phone'}>Teléfono</Label>
               <Input type={'tel'} name={'phone'} onChange={updatePhone} />
             </BlockContainer>
 
             <BlockContainer>
-              <Label htmlFor={'email'}>Email:</Label>
+              <Label htmlFor={'email'}>Email</Label>
               <Input type={'email'} name={'email'} onChange={updateEmail} />
             </BlockContainer>
 
             <TextareaContainer>
-              <Label>Comentarios:</Label>
+              <Label>Comentarios</Label>
               <Textarea onChange={updateComments} />
             </TextareaContainer>
 
             <Button onClick={onSubmit}>Enviar</Button>
           </ContactForm>
         </ContactSectionContainer>
+        <Footer />
       </Section>
     </>
   )

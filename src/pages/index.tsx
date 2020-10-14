@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 
 import CarouselsHandler from '../components/CarouselsHandler'
 import WineInfoSection from '../components/WineInfoSection'
-import AboutSection from '../components/AboutSection'
 
 import LayoutHandler from '../components/LayoutHandler'
 
@@ -14,14 +13,6 @@ const offset = Math.floor(Math.random() * 3)
 export default function Index(): JSX.Element {
 
   const [selectedSection, setSelectedSection] = useState('')
-
-  useEffect(() => {
-    let { hash: section } = location
-    if (!section) return
-    section = section.replaceAll('#', '')
-    console.log(section)
-    setSelectedSection(section)
-  }, [])
 
   useEffect(() => {
     if (!window) return
@@ -46,7 +37,6 @@ export default function Index(): JSX.Element {
             return <WineInfoSection key={index} id={key} img={img} background={background[(index + offset) % 3]} logo={logo} description={description} datasheet={datasheet} store={store} />
           })
         }
-        <AboutSection id={'nosotros'} />
       </LayoutHandler>
     </>
   )
