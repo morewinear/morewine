@@ -67,6 +67,14 @@ export const SignaturesContainer = styled.div`
     & > path {
       fill: darkgray;
     }
+
+    &:first-child {
+      margin-right: 10%;
+    }
+
+    &:last-child {
+      margin-left: 10%;
+    }
   }
 
   @media (max-width: 519px) {
@@ -74,4 +82,6 @@ export const SignaturesContainer = styled.div`
     width: 35%;
     margin-top: 0.25vh;
   }
+
+  
 `
