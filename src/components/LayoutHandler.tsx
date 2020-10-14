@@ -14,6 +14,7 @@ type LayoutHandlerType = {
   carouselCallback?: Dispatch<SetStateAction<string>>,
   sort?: boolean,
   accumulateSpeed?: boolean,
+  hideLogo?: boolean,
 }
 
 export default function LayoutHandler({
