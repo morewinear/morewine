@@ -84,6 +84,7 @@ export const InfoContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `
 
 export const DescriptionContainer = styled(animated.p)`
@@ -94,7 +95,7 @@ export const DescriptionContainer = styled(animated.p)`
   font-weight: 500;
   font-style: italic;
   line-height: 2;
-  margin-top: 6vh;
+  margin-bottom: 8vmax;
   color: white;
   opacity: 0.6;
   font-family: 'Minion Pro Italic';

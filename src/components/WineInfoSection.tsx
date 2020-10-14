@@ -25,7 +25,7 @@ type WineInfoSectionType = {
 }
 
 export default function WineInfoSection({ id, img, background, logo: { default: Logo }, description, datasheet: { default: datasheet }, store }: WineInfoSectionType): JSX.Element {
-  const [ref, entry] = useIntersectionObserver({ threshold: 0.85 })
+  const [ref, entry] = useIntersectionObserver({ threshold: 0.45 })
   const [links] = useState([
     ({ style }: { style: CSSProperties }) => <LinkContainer href={datasheet} style={{ ...style }}>Ficha Técnica</LinkContainer>,
     ({ style }: { style: CSSProperties }) => <LinkContainer href={store} style={{ ...style }}>Ver en Tienda</LinkContainer>,
