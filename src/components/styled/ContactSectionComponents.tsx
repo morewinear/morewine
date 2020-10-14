@@ -6,7 +6,7 @@ export const ContactSectionContainer = styled.div`
   max-width: 450px;
   height: 100%;
   min-height: 350px;
-  max-height: 450px;
+  max-height: 450px; 
   padding: 8px;
 
   &[data-pending=true] {
