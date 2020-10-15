@@ -54,7 +54,7 @@ const MenuItemGeneric = styled.a`
 
 export const ItemContainer = styled.div`
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 4vmin;
   display: flex;
   flex-direction: column;
   padding-right: 16px;
@@ -62,13 +62,13 @@ export const ItemContainer = styled.div`
 
 export const MenuItem = styled(MenuItemGeneric)`
   &:not(:only-child) {
-    margin-bottom: 18px;
+    margin-bottom: 4vmin;
   }
 `
 
 export const SubMenuItem = styled(MenuItemGeneric)`
   font-size: calc(1.15 * 0.813em);
-  margin-bottom: 14px;
+  margin-bottom: 2.75vmin;
 
   &:after {
     content: '·';
