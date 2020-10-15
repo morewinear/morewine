@@ -17,7 +17,7 @@ export const WineData: { [key: string]: WineDataType } = {
   "nieto_limitada_bonarda": {
     img: require('../public/images/wines/nieto_limitada_bonarda.png'),    //DONE
     cellar: 'nieto-senetiner',
-    description: 'En un viñedo de Agrelo, cultivándose con cuidado y paciencia desde 1973, empezó la historia de un varietal del que Nieto Senetiner fue pionero. En nariz de presenta pleno y complejo, con notas de ciruelas, pasas, almendras, mermelada de frutas rojas y algunos matices ahumados. En boca armónico, redondo, persistente, repitiendo las notas percibidas en nariz.',
+    description: 'En un viñedo de Agrelo, cultivándose con cuidado y paciencia desde 1973, empezó la historia de un varietal del que Nieto Senetiner fue pionero. En nariz se presenta pleno y complejo, con notas de ciruelas, pasas, almendras, mermelada de frutas rojas y algunos matices ahumados. En boca armónico, redondo, persistente, repitiendo las notas percibidas en nariz.',
     datasheet: require('../public/datasheets/Nieto Senetiner Reserva Bonarda.pdf'),
     store: 'https://tienda.morewine.ar/productos/nieto-senetiner-bonarda-partida-limitada-2018/',
   },
@@ -79,14 +79,14 @@ export const WineData: { [key: string]: WineDataType } = {
   "mosquita_perro_blend": {
     img: require('../public/images/wines/mosquita_perro_blend.png'),        //DONE
     cellar: 'mosquita-muerta',
-    description: 'Perro Callejero, fiel a sus convicciones e incansable buscador. Guiado por su olfato enfrenta día a día su propio destino. Perro Callejero que busca ese hueso de oro hasta las últimas consecuencias. No intentes domesticarlo… él es su propio dueño.',
+    description: 'Perro Callejero, fiel a sus convicciones e incansable buscador. Guiado por su olfato enfrenta día a día su propio destino. Perro Callejero que busca ese hueso de oro hasta las últimas consecuencias. No intentes domesticarlo… Él es su propio dueño.',
     datasheet: require('../public/datasheets/Mosquita Muerta Perro Callejero.pdf'),
     store: 'https://tienda.morewine.ar/productos/perro-callejero-blend-de-malbec-2019/',
   },
   "mosquita_mosquita_blend": {
     img: require('../public/images/wines/mosquita_mosquita_blend.png'),     //DONE
     cellar: 'mosquita-muerta',
-    description: 'Mosquita Muerta, tímida e inofensiva. Juega con el silencio prudente mientras las demás pierden con el aleteo exagerando. Mosquita Muerta que se las trae, un veneno inesperado, un plan entre manos. No intentes con ella, puedes quedar preso… por siempre.',
+    description: 'Mosquita Muerta, tímida e inofensiva. Juega con el silencio prudente mientras las demás pierden con el aleteo exagerando. Mosquita Muerta que se las trae, un veneno inesperado, un plan entre manos. No intentes con ella, puedes quedar preso… Por siempre.',
     datasheet: require('../public/datasheets/Mosquita Muerta Mosquita.pdf'),
     store: 'https://tienda.morewine.ar/productos/mosquita-muerta-blend-de-tintas/',
   },

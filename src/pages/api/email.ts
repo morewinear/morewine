@@ -8,6 +8,8 @@ type BodyType = {
   comments: string,
 }
 
+const { EMAIL_USER, EMAIL_PASS } = process.env
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(404).end('')
   if (!req.body) return res.status(500).json({
@@ -21,17 +23,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   })
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
+    host: 'smtp.gmail.com',
     port: 587,
+    secure: false,
+    tls: {
+      rejectUnauthorized: false,
+    },
     auth: {
-      user: 'mariane15@ethereal.email',
-      pass: 'MyVGvSTWX2mK39z63v'
-    }
+      user: EMAIL_USER,
+      pass: EMAIL_PASS,
+    },
   })
 
   transporter.sendMail({
     from: 'bot@morewine.ar',
-    to: 'info@morewine.ar',
+    to: 'morewine.ar@gmail.com',
     subject: 'Email de contacto',
     text: `
       Nombre y apellido:  ${name}
@@ -44,10 +50,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       status: 200,
     })
   })
-  .catch((error) => {
-    res.status(500).json({
-      status: 500,
-      error,
+    .catch((error) => {
+      console.error(error)
+      res.status(500).json({
+        status: 500,
+        error,
+      })
     })
-  })
 }
