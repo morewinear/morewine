@@ -46,6 +46,7 @@ export const CellarContainer = styled.div<CellarContainerType>`
 
 export const WineContainer = styled.div`
   position: relative;
+  height: 100%;
   display: grid;
   gap: 0px 4px;
   grid-template-columns: 0.75fr 1fr;
@@ -85,6 +86,10 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 519px) {
+    justify-content: unset;
+  }
 `
 
 export const DescriptionContainer = styled(animated.p)`
@@ -99,13 +104,14 @@ export const DescriptionContainer = styled(animated.p)`
   color: white;
   opacity: 0.6;
   font-family: 'Minion Pro Italic';
+  margin-top: -1vmin;
 
   @media (max-width: 519px) {
     margin-top: 15%;
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
-    font-size: 1.7vh;
+    font-size: 3.4vmin;
     line-height: 1.75;
   }
 `
@@ -119,16 +125,16 @@ export const LinksContainer = styled.div`
   flex-direction: column;
 
   @media (max-width: 519px) {
-    padding-left: 5%;
+    padding-left: 10%;
     padding-right: 5%;
-    bottom: 10%;
+    bottom: 12%;
   }
 `
 
 export const LinkContainer = styled(animated.a)`
   margin: 12px 0;
   color: white;
-  opacity: 0.6;
+  opacity: 0.8 !important;
   text-transform: uppercase;
   text-decoration: none;
   font-size: calc(0.9 * 0.813em);
@@ -144,6 +150,6 @@ export const LinkContainer = styled(animated.a)`
   }
 
   @media (max-width: 519px) {
-    font-size: calc(0.8 * 0.813em);
+    font-size: 2.5vmin;
   }
 `

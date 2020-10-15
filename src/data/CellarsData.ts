@@ -114,7 +114,7 @@ export const CarouselData = [
       {
         img: require('../public/images/carousel/CADUS3.png'),
         offset: '50',
-        id: 'cadus_tocazas_malbec'
+        id: 'cadus_finca_malbec'
       },
     ]
   },
@@ -123,7 +123,7 @@ export const CarouselData = [
     images: [
       {
         img: require('../public/images/carousel/Bramare1.png'),
-        offset: '50',
+        offset: '18',
         id: 'cobos_bramare_malbec'
       },
       {

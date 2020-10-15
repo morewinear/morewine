@@ -26,13 +26,13 @@ export const ScrollToTopContainer = styled.div`
   position: fixed;
   display: none;
   background-color: #121212;
-  width: 64px;
-  height: 64px;
-  bottom: 6px;
-  right: 24px;
+  width: 48px;
+  height: 48px;
+  bottom: 16px;
+  right: 16px;
   border-radius: 50%;
   z-index: 10000;
-  box-shadow: 0px 0px 8px 5px rgba(17, 17, 17, 0.44);
+  box-shadow: 0px 0px 10px 4px rgba(255, 255, 255, 0.15);
   justify-content: center;
   align-items: center;
 

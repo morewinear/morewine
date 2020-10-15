@@ -44,24 +44,24 @@ export const WebMenuData: WebMenuType[] = [
     link: '/lineas',
     drop: [
       {
-        name: 'Nieto Senetiner',
-        link: '/lineas#nieto-senetiner',
-      },
-      {
-        name: 'Salentein',
+        name: 'Bodegas Salentein',
         link: '/lineas#salentein',
       },
       {
-        name: 'La Mascota',
+        name: 'Cadus Wines',
+        link: '/lineas#cadus',
+      },
+      {
+        name: 'Mascota Vineyards',
         link: '/lineas#mascota',
       },
       {
-        name: 'Mosquita Muerta',
+        name: 'Mosquita Muerta Wines',
         link: '/lineas#mosquita-muerta',
       },
       {
-        name: 'Cadus',
-        link: '/lineas#cadus',
+        name: 'Nieto Senetiner',
+        link: '/lineas#nieto-senetiner',
       },
       {
         name: 'Viña Cobos',
@@ -75,23 +75,23 @@ export const WebMenuData: WebMenuType[] = [
     drop: [
       {
         name: 'Malbec',
-        link: '/varietal/malbec',
-      },
-      {
-        name: 'Cabernet Franc',
-        link: '/varietal/cabernet-franc',
-      },
-      {
-        name: 'Cabernet Sauvignon',
-        link: '/varietal/cabernet-sauvignon',
+        link: 'https://tienda.morewine.ar/vinos/malbec/',
       },
       {
         name: 'Blend',
-        link: '/varietal/blend',
+        link: 'https://tienda.morewine.ar/vinos/blend/',
       },
       {
         name: 'Bonarda',
-        link: '/varietal/bonarda',
+        link: 'https://tienda.morewine.ar/vinos/bonarda/',
+      },
+      {
+        name: 'Cabernet Franc',
+        link: 'https://tienda.morewine.ar/vinos/cabernet-franc/',
+      },
+      {
+        name: 'Cabernet Sauvignon',
+        link: 'https://tienda.morewine.ar/vinos/cabernet-sauvignon/',
       },
     ],
   },
