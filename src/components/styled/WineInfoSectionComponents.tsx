@@ -107,7 +107,7 @@ export const DescriptionContainer = styled(animated.p)`
   margin-top: -1vmin;
 
   @media (max-width: 519px) {
-    margin-top: 15%;
+    margin-top: 8%;
     padding-left: 10%;
     padding-right: 10%;
     text-align: center;
@@ -127,7 +127,7 @@ export const LinksContainer = styled.div`
   @media (max-width: 519px) {
     padding-left: 10%;
     padding-right: 5%;
-    bottom: 12%;
+    bottom: 10%;
   }
 `
 

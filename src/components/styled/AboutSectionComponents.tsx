@@ -24,7 +24,6 @@ export const ImageContainer = styled.div<ImageContainerType>`
   background-position: 50%;
   background-size: cover;
   grid-area: 'image';
-  background-color: orange;
 `
 
 export const StoryContainer = styled.div`

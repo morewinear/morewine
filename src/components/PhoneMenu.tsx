@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
@@ -14,20 +14,43 @@ import {
 } from './styled/PhoneMenuComponents'
 
 import { AboutMenuData, SocialMenuData, WebMenuData } from '../data/NavbarData'
+import { useTransition } from 'react-spring'
 
 export default function PhoneRightMenu(): JSX.Element {
   const [show, setShow] = useState<boolean>(false)
+  const debounced = useDebounce<boolean>(show, 180)
 
   const toggleMenu = useCallback(() => {
     setShow(!show)
   }, [show])
 
+  const IconTransition = useTransition(show, null, {
+    from: {
+      transform: 'rotate(0deg)',
+      opacity: 0,
+    },
+    enter: {
+      transform: 'rotate(0)',
+      opacity: 1,
+    },
+    leave: {
+      transform: 'rotate(90deg)',
+      opacity: 0,
+    },
+  })
+
   return (
     <>
-      <MenuButton data-phone onClick={toggleMenu}>
-        <FontAwesomeIcon icon={show ? faTimes : faBars} />
-      </MenuButton>
-      <MenuItemHolder data-show={show}>
+      {
+        IconTransition.map(({ item, key, props }) => {
+          return (
+            <MenuButton key={key} style={props} data-phone onClick={toggleMenu}>
+              <FontAwesomeIcon icon={item ? faTimes : faBars} />
+            </MenuButton>
+          )
+        })
+      }
+      <MenuItemHolder data-show={debounced}>
         {
           WebMenuData.map(({ name, link, drop }, index: number) => {
             return (
@@ -65,4 +88,16 @@ export default function PhoneRightMenu(): JSX.Element {
       </MenuItemHolder>
     </>
   )
+}
+
+function useDebounce<T>(value: T, delay: number): T {
+  const [debouncedValue, setDebouncedValue] = useState<T>(value)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedValue(value), delay)
+
+    return () => clearTimeout(timer)
+  }, [value, delay])
+
+  return debouncedValue
 }

@@ -1,6 +1,7 @@
+import { animated } from 'react-spring'
 import styled from 'styled-components'
 
-export const MenuButton = styled.div`
+export const MenuButton = styled(animated.div)`
   position: absolute;
   width: 48px;
   height: 48px;
@@ -29,6 +30,7 @@ export const MenuItemHolder = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 32px;
+  overflow-y: auto;
 
   &[data-show=true] {
     visibility: visible;
@@ -52,7 +54,7 @@ const MenuItemGeneric = styled.a`
 
 export const ItemContainer = styled.div`
   width: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   padding-right: 16px;
@@ -81,11 +83,13 @@ export const SocialHolder = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 8px;
 
   & > a {
     height: 38px;
     width: 38px;
-    margin: 0px 16px;
+    margin-left: 5px;
+    margin-right: 15px;
 
     & > svg {
       width: 100% !important;
