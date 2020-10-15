@@ -29,12 +29,11 @@ export default function PhoneRightMenu(): JSX.Element {
       transform: 'rotate(0deg)',
       opacity: 0,
     },
-    enter: {
-      transform: 'rotate(0)',
+    enter: {      transform: 'rotate(0deg)',
       opacity: 1,
     },
     leave: {
-      transform: 'rotate(90deg)',
+      transform: 'rotate(270deg)',
       opacity: 0,
     },
   })

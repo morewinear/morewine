@@ -35,7 +35,7 @@ export const WineData: { [key: string]: WineDataType } = {
     cellar: 'salentein',
     description: 'A la vista presenta color rojo/violeta de alta intensidad. En nariz se percibe fresco, intenso y complejo, se destacan aromas a frutos rojos, bayas negras, delicadas notas florales. En la boca presenta entrada dulce y suave, es fresco, frutado y de buena intensidad, amplio en la media boca y largo final.',
     datasheet: require('../public/datasheets/Salentein Reserve Malbec.pdf'),
-    store: '',
+    store: 'https://tienda.morewine.ar/productos/salentein-reserve-malbec/',
   },
   "salentein_grandvu_blend": {
     img: require('../public/images/wines/salentein_grandvu_blend.png'),   //DONE
@@ -49,7 +49,7 @@ export const WineData: { [key: string]: WineDataType } = {
     cellar: 'salentein',
     description: 'Color rojo rubí, profundo. La combinación de cepas da como resultado un vino complejo y equilibrado. Presenta aromas a especias, regaliz, frutos negros como casis y moras que se combinan con delicadas notas de tabaco. En boca es un vino complejo, de impacto dulce, taninos redondos y largo final.',
     datasheet: require('../public/datasheets/Salentein Reserve Blend.pdf'),
-    store: '',
+    store: 'https://tienda.morewine.ar/productos/salentein-reserve-blend/',
   },
 
 
@@ -117,8 +117,8 @@ export const WineData: { [key: string]: WineDataType } = {
     img: require('../public/images/wines/cadus_finca_malbec.png'),      //DONE
     cellar: 'cadus',
     description: 'Color intenso, con tonalidades rojas y brillantes reflejos violáceos. En nariz se caracteriza por sus aromas a violetas y frutos negros como moras, cassis e higos. También se perciben aromas tostados, ahumados y a caramelo, otorgados por su crianza en barrica de roble. Posee una entrada dulce en boca y una larga y buena estructura, combinada con una importante acidez, que le proporciona fluidez y elegancia.',
-    datasheet: require('../public/datasheets/Cadus Single Vineyard Torcazas.pdf'),
-    store: '',
+    datasheet: require('../public/datasheets/Cadus Single Vineyard Finca Viña Vida.pdf'),
+    store: 'https://tienda.morewine.ar/productos/cadus-single-vineyard-finca-vina-vida-chacayes-malbec-2015/',
   },
 
 

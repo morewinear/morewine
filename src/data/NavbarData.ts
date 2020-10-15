@@ -70,7 +70,7 @@ export const WebMenuData: WebMenuType[] = [
     ],
   },
   {
-    name: 'Varietales',
+    name: 'Varietal',
     link: null,
     drop: [
       {

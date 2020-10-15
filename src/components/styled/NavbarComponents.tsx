@@ -79,6 +79,10 @@ const MenuItem = styled.a`
   font-weight: 700;
   letter-spacing: 0.08em;
   transition: all .2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export const AboutMenuContainer = styled(MenuContainer)`
