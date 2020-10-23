@@ -132,9 +132,9 @@ export const WineData: { [key: string]: WineDataType } = {
   "cobos_cocodrilo_corte": {
     img: require('../public/images/wines/cobos_cocodrilo_corte.png'),     //DONE
     cellar: 'cobos',
-    description: 'Un vino complejo, muy elegante y equilibrado. En nariz se destaca la frescura, donde encontramos frutas rojas como guinda y cassis, granada o cereza negra. Notas especiadas muy características del cabernet -pimienta, clavo de olor y paprika- se complementan con un toque floral y una nota herbal a eucalipto para lograr este elegante bouquet. En boca tiene una entrada amable, taninos finos y dulces, buena longitud de boca y persistencia.',
+    description: 'Cocodrilo Corte sigue la tradición del assemblage al estilo Bordeaux. Mantiene su base Cabernet Sauvignon, variando cada cosecha los demás componentes según el mejor criterio de los enólogos. Es un vino complejo, elegante y refinado.',
     datasheet: require('../public/datasheets/Cobos Cocodrilo Red Blend.pdf'),
-    store: 'https://tienda.morewine.ar/productos/cocodrilo-red-blend-corte-2017/',
+    store: 'https://tienda.morewine.ar/productos/cocodrilo-corte-2018/',
   },
   "cobos_felino_malbec": {
     img: require('../public/images/wines/cobos_felino_malbec.png'),       //DONE
